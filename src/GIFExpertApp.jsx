@@ -6,6 +6,9 @@ export const GIFExpertApp = () => {
   const [categories, setCategories] = useState([])  
 
   const onAddCategory = (newCategory) => {
+
+    if ( categories.includes( newCategory ) ) return;
+
     setCategories([newCategory, ...categories])
   }
 
